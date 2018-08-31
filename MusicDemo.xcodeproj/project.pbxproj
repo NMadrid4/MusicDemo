@@ -17,6 +17,7 @@
 		37251BA2211D671C00D8523C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37251BA0211D671C00D8523C /* TableViewCell.swift */; };
 		37251BA3211D671C00D8523C /* MusicViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37251BA1211D671C00D8523C /* MusicViewCell.xib */; };
 		37251BA5211D6A0800D8523C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37251BA4211D6A0800D8523C /* TableViewController.swift */; };
+		917206D021372B6400D629D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 917206CF21372B6400D629D0 /* GoogleService-Info.plist */; };
 		AC83419C18B2FFD768984D56 /* Pods_MusicDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3190933ACA15553981AB9559 /* Pods_MusicDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		37251BA1211D671C00D8523C /* MusicViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicViewCell.xib; sourceTree = "<group>"; };
 		37251BA4211D6A0800D8523C /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		6493A8FDB55597261BEEE576 /* Pods-MusicDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicDemo/Pods-MusicDemo.release.xcconfig"; sourceTree = "<group>"; };
+		917206CF21372B6400D629D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DF6C8857CC9BFA4713A6DA7E /* Pods-MusicDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicDemo/Pods-MusicDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 				37251B8B211D63FA00D8523C /* Main.storyboard */,
 				37251B8E211D63FA00D8523C /* Assets.xcassets */,
 				37251B90211D63FA00D8523C /* LaunchScreen.storyboard */,
+				917206CF21372B6400D629D0 /* GoogleService-Info.plist */,
 				37251B93211D63FA00D8523C /* Info.plist */,
 			);
 			path = MusicDemo;
@@ -190,6 +193,7 @@
 			files = (
 				37251B92211D63FA00D8523C /* LaunchScreen.storyboard in Resources */,
 				37251BA3211D671C00D8523C /* MusicViewCell.xib in Resources */,
+				917206D021372B6400D629D0 /* GoogleService-Info.plist in Resources */,
 				37251B8F211D63FA00D8523C /* Assets.xcassets in Resources */,
 				37251B8D211D63FA00D8523C /* Main.storyboard in Resources */,
 			);
@@ -206,12 +210,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MusicDemo/Pods-MusicDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

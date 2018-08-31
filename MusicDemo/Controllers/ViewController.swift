@@ -9,11 +9,14 @@
 import UIKit
 import Alamofire
 import AVFoundation
+import FirebaseAnalytics
+import Firebase
 
 class ViewController: UIViewController {
     
     var music: Music!
     var audioPlayer: AVPlayer!
+
     
     @IBOutlet weak var artistImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -27,6 +30,13 @@ class ViewController: UIViewController {
         fillData()
         getSong()
         pauseButton.isHidden = true
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let screenClass = classForCoder.description()
+        Analytics.setScreenName("Music ViewController", screenClass: screenClass)
     }
     
     func fillData() {
@@ -55,6 +65,22 @@ class ViewController: UIViewController {
         audioPlayer.play()
         playButton.isHidden = true
         pauseButton.isHidden = false
+        
+//        if let duration = audioPlayer.currentItem?.asset.duration {
+//            let seconds = CMTimeGetSeconds(duration)
+//            print(seconds)
+//        }
+//
+//        
+//        let duration: CMTime = self.audioPlayer.currentItem!.asset.duration;
+//        let seconds = CMTimeGetSeconds(duration);
+//        print(seconds)
+//        
+        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+            AnalyticsParameterItemID: "id play song",
+            AnalyticsParameterContentType: "cont"
+            ])
+        
     }
     @IBAction func pauseSong(_ sender: Any) {
         audioPlayer.pause()
